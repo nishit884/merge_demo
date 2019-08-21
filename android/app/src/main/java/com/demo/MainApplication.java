@@ -8,6 +8,7 @@ import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
 import com.horcrux.svg.SvgPackage;
+import io.rumors.reactnativesettings.RNSettingsPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.BV.LinearGradient.LinearGradientPackage;

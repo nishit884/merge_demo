@@ -36,6 +36,7 @@ target 'demo' do
   pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  pod 'react-native-settings', :path => '../node_modules/react-native-settings'
 
   target 'demoTests' do
     inherit! :search_paths

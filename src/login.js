@@ -35,6 +35,7 @@ import Svg,{
     Pattern,
     Mask,
 } from 'react-native-svg';
+import RNSettings from 'react-native-settings'
 var DeviceInfo = require('react-native-device-info');
 import RNCamera from 'react-native-camera'
 function _login(username,password){
@@ -51,6 +52,17 @@ function gal(){
         console.log(image);
       });
 }
+
+function openSetting() {
+
+    RNSettings.openSetting(RNSettings.ACTION_LOCATION_SOURCE_SETTINGS).
+    then((result) => {
+    if (result === RNSettings.ENABLED) {
+    console.log('location is enabled')
+    }
+
+})
+}
 const Login = () => {
     
     //console.log("Device Model", DeviceInfo.getModel());
@@ -64,7 +76,7 @@ const Login = () => {
                     <AppLogo />
                     <Text style={styles.headerTitle}>Login into Your Account</Text>
                 </View>
-                <Svg height="50%" width="50%" viewBox="0 0 100 100">
+                <Svg height={10} width={10} viewBox="0 0 100 100">
           <Circle
             cx="50"
             cy="50"
@@ -81,7 +93,7 @@ const Login = () => {
                         <Text>Forgot Password ?</Text>
                     </View>
                     <View>
-                        <Button onPress={()=>_login(email,password)} title="LOGIN" />
+                        <Button onPress={()=>openSetting()} title="LOGIN" />
                     </View>
                     <View style={styles.subtitleContainer}>
                         <Text style={styles.subtitleText}>Or login with</Text>
