@@ -12,6 +12,7 @@ import SocialButton from './components/socialButton'
 import TextInput from './components/textInput'
 import {checkLogin} from './services/login'
 import { Actions } from 'react-native-router-flux';
+import ImagePicker from 'react-native-image-crop-picker';
 
 var DeviceInfo = require('react-native-device-info');
 import RNCamera from 'react-native-camera'
@@ -20,8 +21,17 @@ function _login(username,password){
     // .then((response)=>console.log('Login Response',response))
     Actions.drawer()
 }
-
+function gal(){
+    ImagePicker.openPicker({
+        width: 300,
+        height: 400,
+        cropping: true
+      }).then(image => {
+        console.log(image);
+      });
+}
 const Login = () => {
+    
     //console.log("Device Model", DeviceInfo.getModel());
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -55,7 +65,7 @@ const Login = () => {
                         <Text style={styles.subtitleText}>Don't have an account?</Text>
                     </View>
                     <View>
-                        <Button title="REGISTER NOW" style={{ opacity: 0.6 }} />
+                        <Button onPress={()=>gal()} title="REGISTER NOW" style={{ opacity: 0.6 }} />
                     </View>
                 </View>
             </ScrollView>
