@@ -13,7 +13,28 @@ import TextInput from './components/textInput'
 import {checkLogin} from './services/login'
 import { Actions } from 'react-native-router-flux';
 import ImagePicker from 'react-native-image-crop-picker';
-
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    TSpan,
+    TextPath,
+    Path,
+    Polygon,
+    Polyline,
+    Line,
+    Rect,
+    Use,
+    Image,
+    Symbol,
+    Defs,
+    LinearGradient,
+    RadialGradient,
+    Stop,
+    ClipPath,
+    Pattern,
+    Mask,
+} from 'react-native-svg';
 var DeviceInfo = require('react-native-device-info');
 import RNCamera from 'react-native-camera'
 function _login(username,password){
@@ -43,6 +64,16 @@ const Login = () => {
                     <AppLogo />
                     <Text style={styles.headerTitle}>Login into Your Account</Text>
                 </View>
+                <Svg height="50%" width="50%" viewBox="0 0 100 100">
+          <Circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="blue"
+            strokeWidth="2.5"
+            fill="green"
+          />
+        </Svg>
                 <View style={styles.bodyContainer}>
                     <TextInput title="Email ID" onChangeText={(text) => setEmail(text)} value={email} />
                     <TextInput title="Password" secure={true} onChangeText={(text) => setPassword(text)} value={password} />
