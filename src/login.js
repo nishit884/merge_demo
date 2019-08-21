@@ -45,12 +45,12 @@ const Login = () => {
                     <View style={styles.subtitleContainer}>
                         <Text style={styles.subtitleText}>Or login with</Text>
                     </View>
-                    {/* <View style={styles.socialButtonContainer}>
+                    <View style={styles.socialButtonContainer}>
                         <SocialButton icon="facebook" iconType="MaterialCommunityIcons" />
                         <SocialButton icon="twitter" iconType="MaterialCommunityIcons" />
                         <SocialButton icon="youtube" iconType="MaterialCommunityIcons" />
                         <SocialButton icon="linkedin" iconType="MaterialCommunityIcons" />
-                    </View> */}
+                    </View>
                     <View style={styles.subtitleContainer}>
                         <Text style={styles.subtitleText}>Don't have an account?</Text>
                     </View>
