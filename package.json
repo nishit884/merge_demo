@@ -15,7 +15,8 @@
     "react-native-device-info": "^2.3.2",
     "react-native-image-crop-picker": "^0.25.0",
     "react-native-linear-gradient": "^2.5.6",
-    "react-native-router-flux": "^4.0.6"
+    "react-native-router-flux": "^4.0.6",
+    "react-native-settings": "^0.1.2"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",

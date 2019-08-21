@@ -13,7 +13,7 @@ import TextInput from './components/textInput'
 import {checkLogin} from './services/login'
 import { Actions } from 'react-native-router-flux';
 import ImagePicker from 'react-native-image-crop-picker';
-
+import RNSettings from 'react-native-settings'
 var DeviceInfo = require('react-native-device-info');
 import RNCamera from 'react-native-camera'
 function _login(username,password){
@@ -29,6 +29,17 @@ function gal(){
       }).then(image => {
         console.log(image);
       });
+}
+
+function openSetting() {
+
+    RNSettings.openSetting(RNSettings.ACTION_LOCATION_SOURCE_SETTINGS).
+    then((result) => {
+    if (result === RNSettings.ENABLED) {
+    console.log('location is enabled')
+    }
+
+})
 }
 const Login = () => {
     
@@ -50,7 +61,7 @@ const Login = () => {
                         <Text>Forgot Password ?</Text>
                     </View>
                     <View>
-                        <Button onPress={()=>_login(email,password)} title="LOGIN" />
+                        <Button onPress={()=>openSetting()} title="LOGIN" />
                     </View>
                     <View style={styles.subtitleContainer}>
                         <Text style={styles.subtitleText}>Or login with</Text>
