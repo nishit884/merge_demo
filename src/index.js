@@ -4,7 +4,7 @@ import {Icon} from 'native-base'
 import { Router, Stack, Scene, Drawer } from 'react-native-router-flux'
 import Login from './login'
 import Home from './home'
-import Profile from './profile'
+//import Profile from './profile'
 import Sidebar from './components/drawerContent'
 
 const Tab = ({title,focused}) => {
@@ -34,7 +34,7 @@ const App = () => (
             >
                 <Scene key="home" showLabel={false} labelStyle={{fontSize:18}} tabs activeBackgroundColor='#7b67f0' activeTintColor='white'  >
                     <Scene key='tab1' title='Home' component={Home} icon={Tab} hideNavBar initial />
-                    <Scene key='tab2' title='Profile' component={Profile} icon={Tab} hideNavBar />
+                    {/* <Scene key='tab2' title='Profile' component={Profile} icon={Tab} hideNavBar /> */}
                 </Scene>
             </Drawer>
 
